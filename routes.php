@@ -47,7 +47,6 @@ if(array_key_exists($controller, $controllers))
 	{	call($controller, $action); }
 	else
 	{	call('pages', 'error'); }
-
 }
 else
 {	call('pages', 'error');} 

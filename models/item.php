@@ -14,6 +14,7 @@
 
         public static function getAll()
         {
+            echo "3";
             $itemList=[];
 
             require("connection_connect.php");

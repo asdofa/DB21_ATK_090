@@ -21,7 +21,7 @@
 
 <?php foreach($itemList as $item)
     {
-        echo"<tr>
+        echo "<tr>
         <td>$item->ITEM_ID</td>
         <td>$item->ITEM_NAME</td>
         <td>$item->ITEM_CLASSIFIER</td>

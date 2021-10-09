@@ -1,7 +1,7 @@
 <?php
 $controllers = array(
     'pages'=>['home', 'error'],
-    'item'=>['index']
+    'item'=>['index','getAll','search','get','add','update','delete']
     'list_item'=>['index']
     'record_assessment'=>['index']
     /*ตัวย่าง

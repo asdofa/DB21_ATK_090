@@ -8,8 +8,7 @@
 <br /> 
     <p>นาย วัชรศักดิ์ ชื่นชม 6220503341</p>
 <br /> 
-
-    Add <a href=?controller=item&action=new>click</a><br>
+    Add <a href=?controller=item&action=new_item>click</a><br>
 <br/>
 
 <form method="get"action="">

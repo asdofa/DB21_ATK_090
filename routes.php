@@ -11,13 +11,13 @@ $controllers = array(
 
 function call($controller, $action){
 	echo "routes to ".$controller."-".$action."<br>";
-	require_once("./controllers/" .$controller."_controller.php"); 
+	require_once("./controllers/" .$controller."_controller.php");
 	switch($controller)
 	{
-		case "pages":	
+		case "pages":
             $controller = new PagesController();
 		break;
-        case "item" : 	
+        case "item" :
             require_once("models/item.php");				
             $controller = new ItemController();
         break;

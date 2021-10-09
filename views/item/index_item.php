@@ -20,16 +20,12 @@
 </form>
 
 
-<?php foreach($rateList as $rate)
+<?php foreach($itemList as $item)
     {
         echo"<tr>
-        <td>$rate->PROD_ID</td>
-        <td>$rate->PROD_Name</td>
-        <td>$rate->RATE_ID</td>
-        <td>$rate->PROD_QTY</td>
-        <td>$rate->QTY_Rate</td>
-        <td>$rate->PROD_Price</td>
-        <td>$rate->PROD_SCPrice</td>
+        <td>$item->ITEM_ID</td>
+        <td>$item->ITEM_NAME</td>
+        <td>$item->ITEM_CLASSIFIER</td>
         <td><a href=?controller=rate&action=updateFormRate&RATE_ID=$rate->RATE_ID>update</a></td>
         <td><a href=?controller=rate&action=deleteRateConfirm&RATE_ID=$rate->RATE_ID>delete</a></td>
         </tr>";

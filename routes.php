@@ -8,17 +8,17 @@ $controllers = array(
     'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']
     */
 );
-
+echo "2";
 function call($controller, $action){
 	echo "routes to ".$controller."-".$action."<br>";
 	require_once("./controllers/" .$controller."_controller.php");
+    echo "2";
 	switch($controller)
 	{
 		case "pages":
             $controller = new PagesController();
 		break;
         case "item" :
-            echo "2";
             require_once("models/item.php");				
             $controller = new ItemController();
         break;

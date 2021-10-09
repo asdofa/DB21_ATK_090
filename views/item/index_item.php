@@ -26,8 +26,8 @@
         <td>$item->ITEM_ID</td>
         <td>$item->ITEM_NAME</td>
         <td>$item->ITEM_CLASSIFIER</td>
-        <td><a href=?controller=rate&action=updateFormRate&RATE_ID=$rate->RATE_ID>update</a></td>
-        <td><a href=?controller=rate&action=deleteRateConfirm&RATE_ID=$rate->RATE_ID>delete</a></td>
+        <td><a href=?controller=item&action=update_item&ITEM_ID=$item->ITEM_ID>update</a></td>
+        <td><a href=?controller=item&action=deleat_item&ITEM_ID=$item->ITEM_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";

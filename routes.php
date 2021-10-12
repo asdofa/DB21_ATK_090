@@ -4,9 +4,6 @@ $controllers = array(
     'item'=>['index','getAll','search','get','add','update','delete']
     'list_item'=>['index']
     'record_assessment'=>['index']
-    /*ตัวย่าง
-    'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']
-    */
 );
 echo "2";
 function call($controller, $action){
@@ -22,7 +19,7 @@ function call($controller, $action){
             require_once("models/item.php");				
             $controller = new ItemController();
         break;
-        /*ตัวย่าง
+        /*ตัวอย่าง
 		case "quotation" :
             require_once("models/quotationModel.php");				
             require_once("models/staffModels.php");

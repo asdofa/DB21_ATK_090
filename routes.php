@@ -1,5 +1,4 @@
 <?php
-    echo "1";
 
 $controllers = array(
     'pages'=>['home', 'error'],
@@ -7,11 +6,10 @@ $controllers = array(
     'list_item'=>['index']
     'record_assessment'=>['index']
 );
-echo "2";
+
 function call($controller, $action){
 	echo "routes to ".$controller."-".$action."<br>";
 	require_once("./controllers/" .$controller."_controller.php");
-    echo "2";
 	switch($controller)
 	{
 		case "pages":

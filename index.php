@@ -18,8 +18,6 @@
     [<a href="?controller=record_assessment&action=index">Record_Assessment</a>]
     <br>
     <?php echo "controller= ".$controller.", action=".$action; ?>
-    <?php require_once("./routes.php"); 
-        echo "1";
-    ?>
+    <?php require_once("./routes.php");?>
 </body>
 </html>

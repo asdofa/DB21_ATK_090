@@ -5,7 +5,7 @@ class ItemController
     {
         echo "1";
         $itemList = Item::getAll();
-        require_once("./views/item/Index_item.php");
+        require_once("./views/item/index_item.php");
     }
     
 } ?>

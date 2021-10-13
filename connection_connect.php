@@ -1,9 +1,9 @@
 <?php
 
     $severname = "localhost";
-    $username = "db21_096";
-    $password ="db21_096";
-    $dbname = "db21_096";
+    $username = "db21_090";
+    $password ="db21_090";
+    $dbname = "db21_090";
     $conn = new mysqli($severname,$username,$password);
     mysqli_set_charset($conn, "utf8");//โซนเวลา
     if($conn->connect_error)

@@ -1,4 +1,6 @@
 <?php
+    echo "1";
+
 $controllers = array(
     'pages'=>['home', 'error'],
     'item'=>['index','getAll','search','get','add','update','delete']

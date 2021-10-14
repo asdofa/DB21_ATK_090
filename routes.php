@@ -16,25 +16,9 @@ function call($controller, $action){
             $controller = new PagesController();
 		break;
         case "item" :
-            require_once("models/item.php");				
+            //require_once("models/item.php");				
             $controller = new ItemController();
         break;
-        /*ตัวอย่าง
-		case "quotation" :
-            require_once("models/quotationModel.php");				
-            require_once("models/staffModels.php");
-            require_once("models/customerModels.php");
-            $controller = new QuotationController();
-        break;
-		case "quotationDetail" :
-            require_once("models/QuotationDetailModel.php");
-            require_once("models/quotationModel.php");
-            require_once("models/ProductStockModel.php");
-            require_once("models/productModel.php");
-            require_once("models/colorModel.php");
-            $controller = new QuotationDetailController();
-        break;
-        */
 	}
 
 	$controller->{$action}();

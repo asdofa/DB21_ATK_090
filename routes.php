@@ -16,7 +16,7 @@ function call($controller, $action){
             $controller = new PagesController();
 		break;
         case "item" :
-            //require_once("models/item.php");				
+            require_once("models/item.php");				
             $controller = new ItemController();
         break;
 	}

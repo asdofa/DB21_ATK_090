@@ -3,6 +3,8 @@
     <td>ITEM_ID</td>
     <td>ITEM_NAME</td>
     <td>ITEM_CLASSIFIER</td>
+    <td>UPDATE</td>
+    <td>DELETE</td>
 </tr>
 
 <br /> 

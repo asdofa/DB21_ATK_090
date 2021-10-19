@@ -3,8 +3,8 @@
 $controllers = array(
     'pages'=>['home', 'error'],
     'item'=>['index','getall','search','get','add','update','delete'],
-    'list_item'=>['index'],
-    'record_assessment'=>['index']
+    'list_item'=>['index','getall','search','get','add','update','delete'],
+    'record_assessment'=>['index','getall','search','get','add','update','delete']
 );
 
 function call($controller, $action){

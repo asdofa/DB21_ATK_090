@@ -12,7 +12,7 @@
             $this->ITEM_CLASSIFIER = $ITEM_CLASSIFIER;
         }
 
-        public static function getAll()
+        public static function getall()
         {
             echo "3";
             $itemList=[];

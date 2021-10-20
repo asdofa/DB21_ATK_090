@@ -32,7 +32,7 @@ class ItemController
         require_once("./views/item/update_item.php");
     }
 
-    public function update())
+    public function update()
     {
 
         $ITEM_ID = $_GET['ITEM_ID'];

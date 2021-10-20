@@ -2,9 +2,9 @@
 
 $controllers = array(
     'pages'=>['home', 'error'],
-    'item'=>['index','getall','search','get','add','update','delete'],
-    'list_item'=>['index','getall','search','get','add','update','delete'],
-    'record_assessment'=>['index','getall','search','get','add','update','delete']
+    'item'=>['index','search','add','update','delete'],
+    'list_item'=>['index','search','add','update','delete'],
+    'record_assessment'=>['index','search','add','update','delete']
 );
 
 function call($controller, $action){
@@ -16,6 +16,10 @@ function call($controller, $action){
             $controller = new PagesController();
 		break;
         case "item" :
+            require_once("models/item.php");				
+            $controller = new ItemController();
+        break;
+		case "item" :
             require_once("models/item.php");				
             $controller = new ItemController();
         break;

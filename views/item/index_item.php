@@ -20,7 +20,6 @@
     Search</button>
 </form>
 
-
 <?php foreach($itemList as $item)
     {
         echo "<tr>

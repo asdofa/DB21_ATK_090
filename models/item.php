@@ -40,7 +40,7 @@
 
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM ITEM WHERE( ITEM_ID LIKE '%$key%' or ITEM_NAME LIKE '%$key%' or ITEM_CLASSIFIER LIKE '%$key%' ) ";
+            $sql = "SELECT * FROM ITEM WHERE( ITEM_ID like '%$key%' or ITEM_NAME like '%$key%' or ITEM_CLASSIFIER like '%$key%' ) ";
             $result = $conn->query($sql);
 
             while ($my_row = $result->fetch_assoc())
@@ -86,11 +86,11 @@
             return("add success $result row");
             
         }
-        public static function update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER)
+        public static function update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER,$ORATE_ID)
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `ITEM` SET `ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER'";
+            $sql = "UPDATE `ITEM` SET `ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER' WHERE ITEM_ID = '$ORATE_ID' ";
             $result = $conn->query($sql);
 
             require("connection_close.php");

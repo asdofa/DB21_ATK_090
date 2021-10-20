@@ -4,7 +4,7 @@ x<form method="get" action="">
     <label>NAME<input type="text" name="ITEM_NAME"
         value = "<?php echo $item->ITEM_NAME;?>"/></label><br>
 
-    <label>CLASSIFIER<input type="text" name="ITEM_CLASSIFIER"
+    <label>ITEMCLASSIFIER<input type="text" name="ITEM_CLASSIFIER"
         value = "<?php echo $item->ITEM_CLASSIFIER;?>"/></label><br>
 
     

@@ -28,7 +28,7 @@ class ItemController
     {
         $ID=$_GET['ITEM_ID'];
         $item = Item::get($ID);
-        $itemList = Product::getall();
+        $itemList = Item::getall();
         require_once("./views/item/update_item.php");
     }
 

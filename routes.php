@@ -2,8 +2,8 @@
 
 $controllers = array(
     'pages'=>['home', 'error'],
-    'item'=>['index','search','add','update','delete'],
-    'list_item'=>['index','search','add','update','delete'],
+    'item'=>['index','search','new','add','updateform','update','deleteconfirm','delete'],
+    'list_item'=>['index','search','new','add','updateform','update','deleteconfirm','delete'],
     'record_assessment'=>['index','search','add','update','delete']
 );
 

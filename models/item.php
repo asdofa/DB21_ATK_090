@@ -38,7 +38,7 @@
         {
             $itemList=[];
 
-            require("connection_connec.php");
+            require("connection_connect.php");
 
             $sql = "SELECT * FROM ITEM WHERE( ITEM_ID LIKE '%$key%' or ITEM_NAME LIKE '%$key%' or ITEM_CLASSIFIER LIKE '%$key%' ) ";
             $result = $conn->query($sql);

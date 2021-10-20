@@ -10,7 +10,7 @@ class ItemController
     {
         $key=$_GET['key'];
         $itemList = Item::search($key);
-        require_once("./views/item/Index_item.php");
+        require_once("./views/item/index_item.php");
     }
     public function new()
     {

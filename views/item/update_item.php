@@ -4,8 +4,8 @@ x<form method="get" action="">
     <label>NAME<input type="text" name="ITEM_NAME"
         value = "<?php echo $item->ITEM_NAME;?>"/></label><br>
 
-    <label>SCEEN<input type="text" name="ITEM_NAME"
-        value = "<?php echo $item->ITEM_NAME;?>"/></label><br>
+    <label>CLASSIFIER<input type="text" name="ITEM_CLASSIFIER"
+        value = "<?php echo $item->ITEM_CLASSIFIER;?>"/></label><br>
 
     
     <input type="hidden"name="controller"value="item"/>

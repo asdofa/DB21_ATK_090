@@ -86,11 +86,11 @@
             return("add success $result row");
             
         }
-        public static function update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER,$ORATE_ID)
+        public static function update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER,$OLD_ID)
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `ITEM` SET `ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER' WHERE ITEM_ID = '$ORATE_ID' ";
+            $sql = "UPDATE `ITEM` SET `ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER' WHERE ITEM_ID = '$OLD_ID' ";
             $result = $conn->query($sql);
 
             require("connection_close.php");

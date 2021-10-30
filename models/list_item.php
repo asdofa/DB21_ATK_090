@@ -87,25 +87,34 @@
         {
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM ITEM WHERE ITEM_ID = '$ITEM_ID' ";
+            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation NATURAL JOIN Person WHERE ITEM_ID = '$ITEM_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
 
+            $LIST_ITEM_ID=$my_row[LIST_ITEM_ID];
+            $HOMEISO_ID=$my_row[HomeIso_ID];
+            $PERSON_ID=$my_row[PS_id];
+            $PERSON_NAME=$my_row[PS_name];
             $ITEM_ID=$my_row[ITEM_ID];
             $ITEM_NAME=$my_row[ITEM_NAME];
+            $ITEM_QTY=$my_row[ITEM_QTY];
             $ITEM_CLASSIFIER=$my_row[ITEM_CLASSIFIER];
+            $DAY_REQUEST=$my_row[DAY_REQUEST];
 
             require("connection_close.php");
             
-            return new Item($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER);
+            return new Item($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
 
         }
 
-        public static function add($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER)
+        public static function add($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST)
         {
             require("connection_connect.php");
 
-            $sql = "INSERT INTO `ITEM` (`ITEM_ID`,`ITEM_NAME`,`ITEM_CLASSIFIER`) VALUES ('$ITEM_ID','$ITEM_NAME','$ITEM_CLASSIFIER')";
+            $sql = "INSERT INTO `LIST_ITEM` (`LIST_ITEM_ID`,`HomeIso_ID`,`PS_id`,`PS_name`,`ITEM_ID`,
+            `ITEM_NAME`,`ITEM_QTY`,`ITEM_CLASSIFIER`,`DAY_REQUEST`) 
+            VALUES ('$LIST_ITEM_ID','$HOMEISO_ID','$PERSON_ID','$PERSON_NAME','$ITEM_ID',
+            '$ITEM_NAME','$ITEM_QTY','$ITEM_CLASSIFIER''$DAY_REQUEST')";
             $result = $conn->query($sql);
 
             require("connection_close.php");
@@ -113,11 +122,13 @@
             return("add success $result row");
             
         }
-        public static function update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER)
+        public static function update($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$OLD_ID)
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `ITEM` SET `ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER'";
+            $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' ,`HomeIso_ID` = '$HomeIso_ID' ,`PS_id` = '$PERSON_ID' ,
+            `PS_name` = '$PERSON_NAME' ,`ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_QTY` = '$ITEM_QTY' ,
+            `ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER' ,`DAY_REQUEST` = '$DAY_REQUEST'  WHERE ITEM_ID = '$OLD_ID' ";
             $result = $conn->query($sql);
 
             require("connection_close.php");
@@ -129,7 +140,7 @@
         {
             require("connection_connect.php");
             
-            $sql = "DELETE FROM ITEM WHERE ITEM_ID = '$id'";
+            $sql = "DELETE FROM LIST_ITEM WHERE LIST_ITEM_ID = '$id'";
             $result = $conn->query($sql);
 
             require("connection_close.php");

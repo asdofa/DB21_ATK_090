@@ -38,9 +38,9 @@ class ItemController
         $ITEM_ID = $_GET['ITEM_ID'];
         $ITEM_NAME = $_GET['ITEM_NAME'];
         $ITEM_CLASSIFIER = $_GET['ITEM_CLASSIFIER'];
-        $ORATE_ID = $_GET['ORATE_ID'];
+        $OLD_ID = $_GET['OLD_ID'];
 
-        Item::update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER,$ORATE_ID);
+        Item::update($ITEM_ID,$ITEM_NAME,$ITEM_CLASSIFIER,$OLD_ID);
         ItemController::index();
     }
     public function deleteconfirm()

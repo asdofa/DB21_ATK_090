@@ -9,7 +9,7 @@ x<form method="get" action="">
 
     
     <input type="hidden"name="controller"value="item"/>
-    <input type="hidden" name="ORATE_ID" value="<?php echo $item->ITEM_ID; ?>"/>
+    <input type="hidden" name="OLD_ID" value="<?php echo $item->ITEM_ID; ?>"/>
     <button type= "submit"name="action"value="update">update</button>
     <button type= "submit"name="action"value="index">back</button>
 </form>

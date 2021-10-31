@@ -21,10 +21,12 @@ function call($controller, $action){
         break;
 		case "list_item" :
 			require_once("models/list_item.php");
+			require_once("models/home_isolation.php");
             $controller = new ListItemController();
         break;
 		case "record_assessment" :
 			require_once("models/record_assessment.php");
+			require_once("models/home_isolation.php");
             $controller = new RecordAssessmentController();
         break;
 	}

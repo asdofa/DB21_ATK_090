@@ -26,7 +26,7 @@
 
         public static function getall()
         {
-            $itemList=[];
+            $listitemList=[];
 
             require("connection_connect.php");
 
@@ -44,17 +44,17 @@
                 $ITEM_QTY=$my_row[ITEM_QTY];
                 $ITEM_CLASSIFIER=$my_row[ITEM_CLASSIFIER];
                 $DAY_REQUEST=$my_row[DAY_REQUEST];
-                $itemList[]=new Item($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+                $listitemList[]=new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
             }
 
             require("connection_close.php");
 
-            return $itemList;
+            return $listitemList;
         }
 
         public static function search($key)
         {
-            $itemList=[];
+            $listitemList=[];
 
             require("connection_connec.php");
 
@@ -75,12 +75,12 @@
                 $ITEM_QTY=$my_row[ITEM_QTY];
                 $ITEM_CLASSIFIER=$my_row[ITEM_CLASSIFIER];
                 $DAY_REQUEST=$my_row[DAY_REQUEST];
-                $itemList[]=new Item($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+                $listitemList[]=new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
             }
 
             require("connection_close.php");
 
-            return $itemList;
+            return $listitemList;
         }
 
         public static function get($ITEM_ID)
@@ -103,7 +103,7 @@
 
             require("connection_close.php");
             
-            return new Item($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+            return new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
 
         }
 

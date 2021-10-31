@@ -38,8 +38,8 @@
         <td>$listitem->ITEM_QTY</td>
         <td>$listitem->ITEM_CLASSIFIER</td>
         <td>$listitem->DAY_REQUEST</td>
-        <td><a href=?controller=listitem&action=updateform&ITEM_ID=$listitem->LIST_ITEM_ID>update</a></td>
-        <td><a href=?controller=listitem&action=deleteconfirm&ITEM_ID=$listitem->LIST_ITEM_ID>delete</a></td>
+        <td><a href=?controller=listitem&action=updateform&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>update</a></td>
+        <td><a href=?controller=listitem&action=deleteconfirm&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";

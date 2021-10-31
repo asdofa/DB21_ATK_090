@@ -1,5 +1,5 @@
 <?php
-    class ListItem
+    class Listitem
     {
         public $LIST_ITEM_ID;
         public $HOMEISO_ID;
@@ -44,7 +44,7 @@
                 $ITEM_QTY=$my_row[ITEM_QTY];
                 $ITEM_CLASSIFIER=$my_row[ITEM_CLASSIFIER];
                 $DAY_REQUEST=$my_row[DAY_REQUEST];
-                $listitemList[]=new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+                $listitemList[]=new Listitem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
             }
 
             require("connection_close.php");
@@ -75,7 +75,7 @@
                 $ITEM_QTY=$my_row[ITEM_QTY];
                 $ITEM_CLASSIFIER=$my_row[ITEM_CLASSIFIER];
                 $DAY_REQUEST=$my_row[DAY_REQUEST];
-                $listitemList[]=new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+                $listitemList[]=new Listitem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
             }
 
             require("connection_close.php");
@@ -103,18 +103,16 @@
 
             require("connection_close.php");
             
-            return new ListItem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
+            return new Listitem($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST);
 
         }
 
-        public static function add($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$DAY_REQUEST)
+        public static function add($LIST_ITEM_ID,$HOMEISO_ID,$ITEM_ID,$ITEM_QTY,$DAY_REQUEST)
         {
             require("connection_connect.php");
 
-            $sql = "INSERT INTO `LIST_ITEM` (`LIST_ITEM_ID`,`HomeIso_ID`,`PS_id`,`PS_name`,`ITEM_ID`,
-            `ITEM_NAME`,`ITEM_QTY`,`ITEM_CLASSIFIER`,`DAY_REQUEST`) 
-            VALUES ('$LIST_ITEM_ID','$HOMEISO_ID','$PERSON_ID','$PERSON_NAME','$ITEM_ID',
-            '$ITEM_NAME','$ITEM_QTY','$ITEM_CLASSIFIER''$DAY_REQUEST')";
+            $sql = "INSERT INTO `LIST_ITEM` (`LIST_ITEM_ID`,`HomeIso_ID`,`ITEM_ID`,`ITEM_QTY`,`DAY_REQUEST`) 
+            VALUES ('$LIST_ITEM_ID','$HOMEISO_ID','$ITEM_ID','$ITEM_QTY','$DAY_REQUEST')";
             $result = $conn->query($sql);
 
             require("connection_close.php");
@@ -122,13 +120,12 @@
             return("add success $result row");
             
         }
-        public static function update($LIST_ITEM_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$ITEM_ID,$ITEM_NAME,$ITEM_QTY,$ITEM_CLASSIFIER,$OLD_ID)
+        public static function update($LIST_ITEM_ID,$HOMEISO_ID,$ITEM_ID,$ITEM_QTY,$DAY_REQUEST,$OLD_ID)
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' ,`HomeIso_ID` = '$HomeIso_ID' ,`PS_id` = '$PERSON_ID' ,
-            `PS_name` = '$PERSON_NAME' ,`ITEM_ID` = '$ITEM_ID' ,`ITEM_NAME` = '$ITEM_NAME' ,`ITEM_QTY` = '$ITEM_QTY' ,
-            `ITEM_CLASSIFIER` = '$ITEM_CLASSIFIER' ,`DAY_REQUEST` = '$DAY_REQUEST'  WHERE ITEM_ID = '$OLD_ID' ";
+            $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' , `HomeIso_ID` = '$HomeIso_ID' ,
+            `ITEM_ID` = '$ITEM_ID' , `ITEM_QTY` = '$ITEM_QTY' , `DAY_REQUEST` = '$DAY_REQUEST'  WHERE ITEM_ID = '$OLD_ID' ";
             $result = $conn->query($sql);
 
             require("connection_close.php");

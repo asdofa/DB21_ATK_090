@@ -1,7 +1,7 @@
 <table border = 1>
 <tr>
     <td>LIST_ITEM_ID</td>
-    <td>HOMEISO_ID</td>
+    <td>HOMEISOLATION_ID</td>
     <td>PERSON_ID</td>
     <td>PERSON_NAME</td>
     <td>ITEM_ID</td>

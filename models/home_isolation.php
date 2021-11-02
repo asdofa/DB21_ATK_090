@@ -1,5 +1,5 @@
 <?php
-    class HomeIsolation
+    class Homeisolation
     {
         public $HOMEISO_ID;
         public $VD_ID;
@@ -38,7 +38,7 @@
                 $ID_ATK=$my_row[ID_ATK];
                 $INITIAL_SYMPTOM=$my_row[Initial_symptom];
                 $SATUS=$my_row[Satus];
-                $homeisolationList[]=new HomeIsolation($HOMEISO_ID,$VD_ID,$RH_ID,$ID_CARD,$ID_ATK,$INITIAL_SYMPTOM,$SATUS);
+                $homeisolationList[]=new Homeisolation($HOMEISO_ID,$VD_ID,$RH_ID,$ID_CARD,$ID_ATK,$INITIAL_SYMPTOM,$SATUS);
             }
 
             require("connection_close.php");

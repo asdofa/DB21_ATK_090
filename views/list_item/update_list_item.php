@@ -1,4 +1,4 @@
-x<form method="get" action="">
+<form method="get" action="">
     <label>LIST_ITEM_ID <input type="text" name="LIST_ITEM_ID" value = "<?php echo $listitem->LIST_ITEM_ID;?>"/></label><br>
 
     <label>HOMEISOLATION_ID <select name="HOMEISO_ID">

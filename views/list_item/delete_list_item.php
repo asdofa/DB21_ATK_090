@@ -1,4 +1,4 @@
-x<?php echo "<br> คุณยืนยันการกระทำนี้หรือไม่? <br>
+<?php echo "<br> คุณยืนยันการกระทำนี้หรือไม่? <br>
             <br> $listitem->LIST_ITEM_ID <br>"; ?>
 
 <form method="get" action="">

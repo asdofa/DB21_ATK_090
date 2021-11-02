@@ -38,8 +38,8 @@
         <td>$recordassessment->O2_DENSITY</td>
         <td>$recordassessment->TEMP</td>
         <td>$recordassessment->DANGER_LEVEL</td>
-        <td><a href=?controller=recordassessment&action=updateform&LIST_ITEM_ID=$recordassessment->LIST_ITEM_ID>update</a></td>
-        <td><a href=?controller=recordassessment&action=deleteconfirm&LIST_ITEM_ID=$recordassessment->LIST_ITEM_ID>delete</a></td>
+        <td><a href=?controller=recordassessment&action=updateform&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>update</a></td>
+        <td><a href=?controller=recordassessment&action=deleteconfirm&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";

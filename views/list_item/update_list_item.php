@@ -27,7 +27,7 @@
         value = "<?php echo $listitem->DAY_REQUEST;?>"/>
     </label><br>
 
-    <input type="hidden"name="controller"value="listitem"/>
+    <input type="hidden"name="controller"value="list_item"/>
     <input type="hidden" name="OLD_ID" value="<?php echo $listitem->LIST_ITEM_ID; ?>"/>
     <button type= "submit"name="action"value="update">update</button>
     <button type= "submit"name="action"value="index">back</button>

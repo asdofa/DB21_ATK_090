@@ -19,7 +19,7 @@
     <label>ITEM_QTY<input type="text" name="ITEM_QTY" /></label><br>
     <label>DAY_REQUEST<input type="text" name="DAY_REQUEST" /></label><br>
     
-    <input type="hidden" name="controller" value="listitem" />
+    <input type="hidden" name="controller" value="list_item" />
     <button type="submit" name="action" value="add">Save</button>
     <button type="submit" name="action" value="index">back</button>
 </form>

@@ -29,9 +29,10 @@ class ListitemController
     public function updateform()
     {
         $ID=$_GET['LIST_ITEM_ID'];
-        $item = Listitem::get($ID);
-        $itemList = Listitem::getall();
-        require_once("./views/list_item/update_list_iem.php");
+        $listitem = Listitem::get($ID);
+        $homeisolationList = Homeisolation::getall();
+        $itemList = Item::getall();
+        require_once("./views/list_item/update_list_item.php");
     }
 
     public function update()
@@ -49,13 +50,13 @@ class ListitemController
     public function deleteconfirm()
     {
         $ID = $_GET['LIST_ITEM_ID'];
-        $item = Item::get($ID);
+        $listitem = Listitem::get($ID);
         echo $ID ;
-        require_once("./views/item/delete_item.php");
+        require_once("./views/list_item/delete_list_item.php");
     }
     public function delete()
     {
-        $ID=$_GET['ITEM_ID'];
+        $ID=$_GET['LIST_ITEM_ID'];
         Listitem::delete($ID);
         ListitemController::index();
     }

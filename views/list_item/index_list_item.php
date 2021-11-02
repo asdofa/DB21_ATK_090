@@ -16,12 +16,12 @@
 <br /> 
     <p>นาย วัชรศักดิ์ ชื่นชม 6220503341</p>
 <br /> 
-    Add <a href=?controller=listitem&action=new>click</a><br>
+    Add <a href=?controller=list_item&action=new>click</a><br>
 <br/>
 
 <form method="get"action="">
     <input type="text" name="key">
-    <input type="hidden" name="controller" value="listitem"/>
+    <input type="hidden" name="controller" value="list_item"/>
     <button type="submit" name="action" value="search">
     Search</button>
 </form>
@@ -38,8 +38,8 @@
         <td>$listitem->ITEM_QTY</td>
         <td>$listitem->ITEM_CLASSIFIER</td>
         <td>$listitem->DAY_REQUEST</td>
-        <td><a href=?controller=listitem&action=updateform&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>update</a></td>
-        <td><a href=?controller=listitem&action=deleteconfirm&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>delete</a></td>
+        <td><a href=?controller=list_item&action=updateform&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>update</a></td>
+        <td><a href=?controller=list_item&action=deleteconfirm&LIST_ITEM_ID=$listitem->LIST_ITEM_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";

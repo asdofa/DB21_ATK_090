@@ -92,7 +92,7 @@
             $my_row = $result->fetch_assoc();
 
             $LIST_ITEM_ID=$my_row[LIST_ITEM_ID];
-            $HOMEISO_ID=$my_row[HomeIso_ID];
+            $HOMEISO_ID=$my_row[HOMEISO_ID];
             $PERSON_ID=$my_row[PS_id];
             $PERSON_NAME=$my_row[PS_name];
             $ITEM_ID=$my_row[ITEM_ID];
@@ -111,7 +111,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "INSERT INTO `LIST_ITEM` (`LIST_ITEM_ID`,`HomeIso_ID`,`ITEM_ID`,`ITEM_QTY`,`DAY_REQUEST`) 
+            $sql = "INSERT INTO `LIST_ITEM` (`LIST_ITEM_ID`,`HOMEISO_ID`,`ITEM_ID`,`ITEM_QTY`,`DAY_REQUEST`) 
             VALUES ('$LIST_ITEM_ID','$HOMEISO_ID','$ITEM_ID','$ITEM_QTY','$DAY_REQUEST')";
             $result = $conn->query($sql);
 
@@ -124,7 +124,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' , `HomeIso_ID` = '$HomeIso_ID' ,
+            $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' , `HOMEISO_ID` = '$HOMEISO_ID' ,
             `ITEM_ID` = '$ITEM_ID' , `ITEM_QTY` = '$ITEM_QTY' , `DAY_REQUEST` = '$DAY_REQUEST'  WHERE ITEM_ID = '$OLD_ID' ";
             $result = $conn->query($sql);
 

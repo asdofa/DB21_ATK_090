@@ -92,7 +92,7 @@
             $my_row = $result->fetch_assoc();
 
             $RECORDASSESSMENT_ID=$my_row[RA_ID];
-            $HOMEISO_ID=$my_row[HomeIso_ID];
+            $HOMEISO_ID=$my_row[HOMEISO_ID];
             $PERSON_ID=$my_row[PS_id];
             $PERSON_NAME=$my_row[PS_name];
             $RECORDASSESSMENT_DAY=$my_row[RA_DAY];
@@ -111,7 +111,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "INSERT INTO `RECORD_ASSESSMENT` (`RA_ID`,`HomeIso_ID`,`RA_DAY`,`RECORD`,`O2_DENSITY`,`TEMP`,`DANGER_LEVEL`) 
+            $sql = "INSERT INTO `RECORD_ASSESSMENT` (`RA_ID`,`HOMEISO_ID`,`RA_DAY`,`RECORD`,`O2_DENSITY`,`TEMP`,`DANGER_LEVEL`) 
             VALUES ('$RECORDASSESSMENT_ID','$HOMEISO_ID','$RECORDASSESSMENT_DAY','$RECORD','$O2_DENSITY','$TEMP','$DANGER_LEVEL')";
             $result = $conn->query($sql);
 
@@ -124,7 +124,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "UPDATE `RECORD_ASSESSMENT` SET `RA_ID` = '$RECORDASSESSMENT_ID' ,`HomeIso_ID` = '$HOMEISO_ID' ,`RA_DAY` = '$RECORDASSESSMENT_DAY' ,
+            $sql = "UPDATE `RECORD_ASSESSMENT` SET `RA_ID` = '$RECORDASSESSMENT_ID' ,`HOMEISO_ID` = '$HOMEISO_ID' ,`RA_DAY` = '$RECORDASSESSMENT_DAY' ,
             `RECORD` = '$RECORD' ,`O2_DENSITY` = '$O2_DENSITY' ,`TEMP` = '$TEMP' ,`DANGER_LEVEL` = '$DANGER_LEVEL' WHERE RA_ID = '$OLD_ID' ";
 
             $result = $conn->query($sql);

@@ -23,7 +23,7 @@
         value = "<?php echo $listitem->ITEM_QTY;?>"/>
     </label><br>
 
-    <label>DAY_REQUEST<input type="text" name="DAY_REQUEST"
+    <label>DAY_REQUEST<input type="date" name="DAY_REQUEST"
         value = "<?php echo $listitem->DAY_REQUEST;?>"/>
     </label><br>
 

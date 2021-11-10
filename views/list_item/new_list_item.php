@@ -17,7 +17,7 @@
         </select>
     </label><br>
     <label>ITEM_QTY<input type="text" name="ITEM_QTY" /></label><br>
-    <label>DAY_REQUEST<input type="text" name="DAY_REQUEST" /></label><br>
+    <label>DAY_REQUEST<input type="date" name="DAY_REQUEST" /></label><br>
     
     <input type="hidden" name="controller" value="list_item" />
     <button type="submit" name="action" value="add">Save</button>

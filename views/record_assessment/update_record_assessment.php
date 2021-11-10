@@ -10,7 +10,7 @@
         </select>
     </label><br>
 
-    <label>RECORDASSESSMENT_DAY<input type="text" name="RECORDASSESSMENT_DAY"
+    <label>RECORDASSESSMENT_DAY<input type="date" name="RECORDASSESSMENT_DAY"
         value = "<?php echo $recordassessment->RECORDASSESSMENT_DAY;?>"/>
     </label><br>
 

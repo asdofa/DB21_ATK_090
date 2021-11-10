@@ -8,7 +8,7 @@
             ?>
         </select>
     </label><br>
-    <label>RECORDASSESSMENT_DAY<input type="text" name="RECORDASSESSMENT_DAY" /></label><br>
+    <label>RECORDASSESSMENT_DAY<input type="date" name="RECORDASSESSMENT_DAY" /></label><br>
     <label>RECORD<input type="text" name="RECORD" /></label><br>
     <label>O2_DENSITY<input type="text" name="O2_DENSITY" /></label><br>
     <label>TEMP<input type="text" name="TEMP" /></label><br>

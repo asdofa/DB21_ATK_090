@@ -14,6 +14,7 @@ class RecordassessmentController
     }
     public function new()
     {
+        $homeisolationList = Homeisolation::getall();
         require_once("./views/record_assessment/new_record_assessment.php");
     }
     public function add()

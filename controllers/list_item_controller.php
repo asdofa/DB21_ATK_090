@@ -14,6 +14,8 @@ class ListitemController
     }
     public function new()
     {
+        $itemList = Item::getall();
+        $homeisolationList = Homeisolation::getall();
         require_once("./views/list_item/new_list_item.php");
     }
     public function add()

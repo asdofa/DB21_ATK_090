@@ -21,6 +21,7 @@ function call($controller, $action){
         break;
 		case "list_item" :
 			require_once("models/list_item.php");
+			require_once("models/item.php");
 			require_once("models/home_isolation.php");
             $controller = new ListItemController();
         break;

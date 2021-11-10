@@ -1,4 +1,4 @@
-x<?php 
+<?php 
 class RecordassessmentController
 {
     public function index()

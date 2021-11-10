@@ -30,7 +30,7 @@
 
             require("connection_connect.php");
 
-            $sql="SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation NATURAL JOIN Person";
+            $sql="SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id";
             $result=$conn->query($sql);
 
             while($my_row = $result->fetch_assoc())

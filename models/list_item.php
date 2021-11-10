@@ -56,7 +56,7 @@
         {
             $listitemList=[];
 
-            require("connection_connec.php");
+            require("connection_connect.php");
 
             $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id
             WHERE( LIST_ITEM_ID LIKE '%$key%' or HomeIso_ID LIKE '%$key%' or PS_id LIKE '%$key%' or PS_name LIKE '%$key%' 
@@ -87,7 +87,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation NATURAL JOIN Person WHERE LIST_ITEM_ID = '$LIST_ITEM_ID' ";
+            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id WHERE LIST_ITEM_ID = '$LIST_ITEM_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
 
@@ -125,7 +125,7 @@
             require("connection_connect.php");
 
             $sql = "UPDATE `LIST_ITEM` SET `LIST_ITEM_ID` = '$LIST_ITEM_ID' , `HOMEISO_ID` = '$HOMEISO_ID' ,
-            `ITEM_ID` = '$ITEM_ID' , `ITEM_QTY` = '$ITEM_QTY' , `DAY_REQUEST` = '$DAY_REQUEST'  WHERE ITEM_ID = '$OLD_ID' ";
+            `ITEM_ID` = '$ITEM_ID' , `ITEM_QTY` = '$ITEM_QTY' , `DAY_REQUEST` = '$DAY_REQUEST'  WHERE LIST_ITEM_ID = '$OLD_ID' ";
             $result = $conn->query($sql);
 
             require("connection_close.php");

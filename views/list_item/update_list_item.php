@@ -2,22 +2,20 @@
     <label>LIST_ITEM_ID <input type="text" name="LIST_ITEM_ID" value = "<?php echo $listitem->LIST_ITEM_ID;?>"/></label><br>
 
     <label>HOMEISOLATION_ID <select name="HOMEISO_ID">
-            <?php foreach ($homeisolationList as $P)
-            {
-                echo "<option value = $P->HOMEISO_ID> $P->HOMEISO_ID</option>";
-            }
-            ?>
-        </select>
-    </label><br>
+        <?php foreach($homeisolationList as $P) {
+            echo "<option value = $P->HOMEISO_ID";
+            if($P->HOMEISO_ID==$listitem->HOMEISO_ID){echo " selected='selected'";}
+            echo ">$P->HOMEISO_ID</option>";}
+        ?>
+    </select></label><br> 
 
-    <label>ITEM_ID <select name="ITEM_ID">
-            <?php foreach ($itemList as $P)
-            {
-                echo "<option value = $P->ITEM_ID> $P->ITEM_ID</option>";
-            }
-            ?>
-        </select>
-    </label><br>
+    <label>ITEM_ID  <select name="ITEM_ID">
+        <?php foreach($itemList as $i) {
+            echo "<option value = $i->ITEM_ID";
+            if($i->ITEM_ID==$listitem->ITEM_ID){echo " selected='selected'";}
+            echo ">$i->ITEM_NAME</option>";}
+        ?>
+    </select></label><br> 
 
     <label>ITEM_QTY<input type="text" name="ITEM_QTY"
         value = "<?php echo $listitem->ITEM_QTY;?>"/>

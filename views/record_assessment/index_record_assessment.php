@@ -16,12 +16,12 @@
 <br /> 
     <p>นาย วัชรศักดิ์ ชื่นชม 6220503341</p>
 <br /> 
-    Add <a href=?controller=recordassessment&action=new>click</a><br>
+    Add <a href=?controller=record_assessment&action=new>click</a><br>
 <br/>
 
 <form method="get"action="">
     <input type="text" name="key">
-    <input type="hidden" name="controller" value="recordassessment"/>
+    <input type="hidden" name="controller" value="record_assessment"/>
     <button type="submit" name="action" value="search">
     Search</button>
 </form>
@@ -38,8 +38,8 @@
         <td>$recordassessment->O2_DENSITY</td>
         <td>$recordassessment->TEMP</td>
         <td>$recordassessment->DANGER_LEVEL</td>
-        <td><a href=?controller=recordassessment&action=updateform&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>update</a></td>
-        <td><a href=?controller=recordassessment&action=deleteconfirm&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>delete</a></td>
+        <td><a href=?controller=record_assessment&action=updateform&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>update</a></td>
+        <td><a href=?controller=record_assessment&action=deleteconfirm&RECORDASSESSMENT_ID=$recordassessment->RECORDASSESSMENT_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";

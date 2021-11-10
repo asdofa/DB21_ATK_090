@@ -46,7 +46,8 @@ class RecordassessmentController
         $O2_DENSITY = $_GET['O2_DENSITY'];
         $TEMP = $_GET['TEMP'];
         $DANGER_LEVEL = $_GET['DANGER_LEVEL'];
-
+        $OLD_ID = $_GET['OLD_ID'];
+        
         Recordassessment::update($RECORDASSESSMENT_ID,$HOMEISO_ID,$RECORDASSESSMENT_DAY,$RECORD,$O2_DENSITY,$TEMP,$DANGER_LEVEL,$OLD_ID);
         RecordassessmentController::index();
     }

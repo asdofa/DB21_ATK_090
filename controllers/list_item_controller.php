@@ -31,6 +31,7 @@ class ListitemController
     public function updateform()
     {
         $ID=$_GET['LIST_ITEM_ID'];
+        echo $ID;
         $listitem = Listitem::get($ID);
         $homeisolationList = Homeisolation::getall();
         $itemList = Item::getall();

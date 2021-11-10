@@ -44,7 +44,7 @@
                 $O2_DENSITY=$my_row[O2_DENSITY];
                 $TEMP=$my_row[TEMP];
                 $DANGER_LEVEL=$my_row[DANGER_LEVEL];
-                $itemList[]=new Recordassessment($RECORDASSESSMENT_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$RECORDASSESSMENT_DAY,$RECORD,$O2_DENSITY,$TEMP,$DANGER_LEVEL);
+                $recordassessmentList[]=new Recordassessment($RECORDASSESSMENT_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$RECORDASSESSMENT_DAY,$RECORD,$O2_DENSITY,$TEMP,$DANGER_LEVEL);
             }
 
             require("connection_close.php");
@@ -56,9 +56,9 @@
         {
             $recordassessmentList=[];
 
-            require("connection_connect.php");
+            require("connection_connect.php"); 
 
-            $sql = "SELECT * FROM RECORD_ASSESSMENT NATURAL JOIN HomeIsolation NATURAL JOIN Person 
+            $sql = "SELECT * FROM RECORD_ASSESSMENT NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id
             WHERE( RA_ID like '%$key%' or HomeIso_ID like '%$key%' or PS_id like '%$key%' or PS_name like '%$key%' or RA_DAY like '%$key%' or RECORD like '%$key%' 
             or O2_DENSITY like '%$key%' or TEMP like '%$key%' or DANGER_LEVEL like '%$key%' ) ";
 
@@ -75,7 +75,7 @@
                 $O2_DENSITY=$my_row[O2_DENSITY];
                 $TEMP=$my_row[TEMP];
                 $DANGER_LEVEL=$my_row[DANGER_LEVEL];
-                $itemList[]=new Recordassessment($RECORDASSESSMENT_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$RECORDASSESSMENT_DAY,$RECORD,$O2_DENSITY,$TEMP,$DANGER_LEVEL);
+                $recordassessmentList[]=new Recordassessment($RECORDASSESSMENT_ID,$HOMEISO_ID,$PERSON_ID,$PERSON_NAME,$RECORDASSESSMENT_DAY,$RECORD,$O2_DENSITY,$TEMP,$DANGER_LEVEL);
             }
 
             require("connection_close.php");
@@ -87,7 +87,7 @@
         {
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM RECORD_ASSESSMENT NATURAL JOIN HomeIsolation NATURAL JOIN Person WHERE RA_ID = '$RECORDASSESSMENT_ID' ";
+            $sql = "SELECT * FROM RECORD_ASSESSMENT NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id WHERE RA_ID = '$RECORDASSESSMENT_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
 

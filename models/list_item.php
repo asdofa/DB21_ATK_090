@@ -87,14 +87,12 @@
         {
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation NATURAL JOIN Person WHERE ITEM_ID = '$ITEM_ID' ";
+            $sql = "SELECT * FROM LIST_ITEM WHERE LIST_ITEM_ID = '$LIST_ITEM_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
 
             $LIST_ITEM_ID=$my_row[LIST_ITEM_ID];
             $HOMEISO_ID=$my_row[HOMEISO_ID];
-            $PERSON_ID=$my_row[PS_id];
-            $PERSON_NAME=$my_row[PS_name];
             $ITEM_ID=$my_row[ITEM_ID];
             $ITEM_NAME=$my_row[ITEM_NAME];
             $ITEM_QTY=$my_row[ITEM_QTY];

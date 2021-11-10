@@ -36,7 +36,7 @@
             while($my_row = $result->fetch_assoc())
             {
                 $LIST_ITEM_ID=$my_row[LIST_ITEM_ID];
-                $HOMEISO_ID=$my_row[HomeIso_ID];
+                $HOMEISO_ID=$my_row[HOMEISO_ID];
                 $PERSON_ID=$my_row[PS_id];
                 $PERSON_NAME=$my_row[PS_name];
                 $ITEM_ID=$my_row[ITEM_ID];
@@ -67,7 +67,7 @@
             while ($my_row = $result->fetch_assoc())
             {
                 $LIST_ITEM_ID=$my_row[LIST_ITEM_ID];
-                $HOMEISO_ID=$my_row[HomeIso_ID];
+                $HOMEISO_ID=$my_row[HOMEISO_ID];
                 $PERSON_ID=$my_row[PS_id];
                 $PERSON_NAME=$my_row[PS_name];
                 $ITEM_ID=$my_row[ITEM_ID];

@@ -58,7 +58,7 @@
 
             require("connection_connec.php");
 
-            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation NATURAL JOIN Person 
+            $sql = "SELECT * FROM LIST_ITEM NATURAL JOIN ITEM NATURAL JOIN HomeIsolation LEFT JOIN Person ON HomeIsolation.ID_Card = Person.PS_id
             WHERE( LIST_ITEM_ID LIKE '%$key%' or HomeIso_ID LIKE '%$key%' or PS_id LIKE '%$key%' or PS_name LIKE '%$key%' 
             or ITEM_ID LIKE '%$key%' or ITEM_NAME LIKE '%$key%' or ITEM_QTY LIKE '%$key%' or ITEM_CLASSIFIER LIKE '%$key%' 
             or DAY_REQUEST LIKE '%$key%') ";
